@@ -1,0 +1,17 @@
+# Create a heart shape using matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate x and y values for the heart
+x = np.linspace(-2, 2, 1000)
+y1 = np.sqrt(1 - (abs(x) - 1)**2)
+y2 = -3 * np.sqrt(1 - (x / 2)**2)
+
+# Plot the heart shape
+plt.figure(figsize=(6, 6))
+plt.plot(x, y1, color="red")
+plt.plot(x, y2, color="red")
+plt.fill_between(x, y1, y2, color="red")
+plt.axis('off')
+plt.axis('equal')
+plt.show()
